@@ -1,0 +1,143 @@
+                                                               ANGULAR
+
+je veux bien comprendre et explique moi chaque details Notes
+QCM
+Fiches de révision
+Podcast
+Exercices à trous
+Test écrit
+Leçon de tutorat
+Contenu
+Parfait Kenzie ! J’ai préparé pour toi un ensemble complet de supports pédagogiques autour du cours Angular que tu as partagé. Voici ce que tu as maintenant à disposition :
+
+🎙️ Podcast  
+Un podcast est prêt, il t’explique l’Introduction à Angular et la structure d’un projet de manière claire et orale, idéal pour réviser en écoutant.
+
+📑 Fiches de révision
+
+Résumés des chapitres (Introduction, Installation, Structure d’un projet).
+
+Points clés : SPA, versions d’Angular, passage de JavaScript à TypeScript, architecture MVVM, protocole HTTP, commandes CLI, structure des fichiers Angular.
+
+Schémas simplifiés pour retenir la hiérarchie des composants et modules.
+
+📝 QCM (Quiz à choix multiples)
+
+Questions sur les versions d’Angular et leurs caractéristiques.
+
+Questions sur la structure d’un projet Angular (fichiers app.module.ts, app.component.ts, etc.).
+
+Questions sur le protocole HTTP et ses méthodes (GET, POST, PUT, DELETE).
+
+📘 Exercices à trous
+
+Compléter des définitions (ex. : “Angular utilise _______ depuis la version 2”).
+
+Compléter du code Angular (ex. : décorateur @Component avec ses propriétés).
+
+Compléter une requête HTTP (entête, corps, etc.).
+
+✍️ Test écrit
+
+Partie théorique : expliquer SPA, MVVM, rôle de TypeScript.
+
+Partie pratique : écrire la commande pour créer un composant, décrire la structure d’un projet Angular.
+
+👩‍🏫 Leçon de tutorat
+
+Étape par étape : installation de NodeJS et Angular CLI, création d’un projet, exploration de la structure, ajout de composants, test du projet.
+
+Comparaison visuelle entre fichiers (app.module.ts, app.component.ts, app-routing.module.ts).
+
+Exercices guidés pour manipuler le data binding et insérer des composants.
+
+👉 Tu veux que je commence par générer un QCM interactif pour tester tes connaissances, ou préfères-tu d’abord les fiches de révision pour avoir une vue d’ensemble avant de pratiquer ?
+
+
+Angular Project Structure
+Listen
+
+
+Supports Pédagogiques pour le Cours Angular
+
+Open page
+
+I started the page, Supports Pédagogiques pour le Cours Angular. You can edit it now, or come back to it later.
+
+mais je veux le podcad en francais et je veux que m'explique tous parce je ne connais rien sur ca
+Parfait Kenzie ! Je vais tout reprendre en français, étape par étape, comme si tu découvrais Angular pour la première fois. Tu auras une explication claire, des notes, des fiches de révision, des QCM, des exercices et même un petit podcast résumé.
+
+🎧 Podcast (version française)
+Imagine que tu écoutes :
+
+"Bienvenue dans ce podcast sur Angular. Angular est un framework open-source créé par Google en 2009. Il sert à développer des applications web modernes, appelées SPA (Single Page Applications), qui sont rapides et réactives. À partir de la version 2, Angular utilise TypeScript, un langage créé par Microsoft, plus structuré et sécurisé que JavaScript. Une application Angular est organisée en modules, composants, services, directives et pipes. Le composant racine est AppComponent, et tout le projet est géré par Angular CLI, une interface en ligne de commande. Pour démarrer, il faut installer NodeJS, puis Angular CLI, créer un projet avec ng new, et lancer avec ng serve. Voilà la base !"
+
+📑 Fiches de révision
+Angular en bref
+Créé par Google en 2009
+
+AngularJS (v1) → JavaScript
+
+Angular 2 et + → TypeScript
+
+SPA (Single Page Application) → une seule page HTML, contenu chargé dynamiquement
+
+Architecture MVVM
+Model → données (classes, interfaces)
+
+View → ce que l’utilisateur voit (HTML, CSS)
+
+ViewModel → logique, fichier .component.ts relié à la vue
+
+Structure d’un projet Angular
+src/app → contient les composants
+
+app.module.ts → module principal
+
+app.component.ts → composant racine
+
+app.component.html → vue HTML
+
+app.component.css → styles CSS
+
+app-routing.module.ts → gestion des routes
+
+📝 QCM (Questions à choix multiples)
+Angular utilise TypeScript depuis quelle version ?
+a) v1
+b) v2 ✅
+c) v4
+
+Le fichier principal d’un projet Angular est :
+a) index.html ✅
+b) main.ts  
+c) style.css
+
+Quelle commande crée un nouveau composant ?
+a) ng new component  
+b) ng generate component NomComposant ✅
+c) npm install component
+
+✍️ Exercices à trous
+Angular est un framework _______ (JavaScript / TypeScript).
+
+Le décorateur utilisé pour déclarer un composant est _______.
+
+La commande pour lancer un projet est ng _______.
+
+
+
+👩‍🏫 Leçon de tutorat
+Installer NodeJS et Angular CLI
+
+Créer un projet avec ng new MonProjet
+
+Explorer la structure (src/app, app.module.ts, etc.)
+
+Modifier app.component.html pour afficher un message
+
+Créer un composant avec ng g component Bonjour
+
+Insérer le composant dans app.component.html avec son sélecteur <app-bonjour>
+
+Tester avec ng serve
