@@ -1,0 +1,68 @@
+Citez les caractéristiques de Linux ?
+- Multitâches : exécute plusieurs programmes en même temps.
+- Multi-utilisateurs : plusieurs utilisateurs actifs sur la même machine en même temps
+-Portable (Multi plates-formes) :capable de fonctionner sur différents types d'ordinateurs
+-Open source : signifie un système dont le code source est à la disposition du grand public,
+-Gratuit
+
+
+1. /home
+2. /etc,
+3. /bin
+4. /var.
+5. /tmp.
+6. /root 
+
+5 A. Contient les fichiers temporaires
+1 B. Contient les fichiers personnels des utilisateurs
+2 C. Contient les fichiers de configuration du système
+4 D. Contient les fichiers variables (logs, cache...)
+3 E. Contient les commandes essentielles (Is, cp, etc.)
+6 F. Répertoire personnel de l'administrateur
+
+
+Citez 3 distributions de Lint
+-Ubunto
+-Centos
+-Red hat
+-Debian
+-Fedora
+
+Citez les composants d'u système linux ?
+-Shell
+, -Noyau
+-Systeme de fichiers
+-Les utilitaires
+
+
+Exercice
+1. Dans votre répertoire d'accueil, créez l'arborescence suivante :
+2. Créer les fichiers marchel.fxt et marche2.ext
+3. Déplacez marchel.tr vers le répertoire Marketing ?
+4. Copiez marche2.txf dans Finance
+S. Supprimez GRH
+
+
+correction de l'exercice
+
+1--JS mkdir -p Estem/Finance Estem/Marketing Estem/GRH/Gestion salaires
+Estem/GRH/Marches_publics
+2- ~JS touch Estem/GRH/Marches publics/marchel.txt
+Estem/GRH/Marches_publics/marche2.txf
+3- ~JS mv Estem/GRH/Marches_publics/marchel.txt Estem/Marketing
+4- ~JS cp Estem/GRH/Marches_publics/marche2.txt Estem/Finance
+5- ~JS rm -R Estem/GRH
+
+
+Ecrire un script qui permet d'acceder a un repertoire 
+dans le nom est saisi en premier argument et de créer deux fichiers dans les noms sont saisis dans le deuxieme et troisieme argument.
+
+
+#!/bin/bash
+if [ "$1" == "1" ]; then touch "$2"
+elif [ "$1" == "2" ]; then
+mkdir "$2"
+elif [ "$1" == "3" ]; then
+In -s "$2" "$3"
+else echo "Usage :" echo "$0 1 nom_fichier"
+echo "$O 2 nom_repertoire" echo "$O 3 cible lien _symbolique" fi
