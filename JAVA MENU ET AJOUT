@@ -1,0 +1,178 @@
+import javax.swing.*;
+import java.awt.*;
+import java.awt.event.*;
+
+public class menuS extends JFrame implements ActionListener
+{
+    Container con=null;
+    
+    JMenuBar men = new JMenuBar();
+    
+    JMenu m1 = new JMenu("Filiere");
+    JMenuItem af = new JMenuItem("Ajout");
+    
+     JMenu m2 = new JMenu("Etudiant");
+    JMenuItem ie = new JMenuItem("Insertion");
+    
+     JMenu m3 = new JMenu("Fin");
+    JMenuItem q = new JMenuItem("Exit");
+    
+    public menuS()
+    {
+        con=getContentPane();
+        con.setLayout(new FlowLayout());
+        setSize(new Dimension(1300,1400));
+        
+        con.setBackground(Color.pink);
+        
+        setJMenuBar(men);
+        men.add(m1);
+        m1.add(af);
+        
+         men.add(m2);
+        m2.add(ie);
+        
+         men.add(m3);
+        m3.add(q);
+        
+        q.addActionListener(this);
+        af.addActionListener(this);
+        ie.addActionListener(this);
+    }
+    
+    
+    public void actionPerformed(ActionEvent kiki)
+    {
+        if (kiki.getSource()==q)
+        {
+        JOptionPane.showMessageDialog(null,"bye bye ");
+        System.exit(0);
+        }
+        else if (kiki.getSource()==af)
+        {
+        //filiere
+                this.hide();
+            new ajoutf().setVisible(true);
+            } 
+        else
+           
+        {
+            
+        //etudiant
+            this.hide();
+        }
+        
+    }
+    
+    public static void main(String[] arg)
+    {
+        new menuS().setVisible(true);
+    }
+}
+
+
+
+
+
+
+
+
+
+
+DEUXIEME PROGRAMME
+
+import javax.swing.*;
+import java.awt.*;
+import java.awt.event.*;
+import java.sql.*;
+public class ajoutf extends JFrame implements ActionListener
+{
+    Container con=null;
+    JLabel l1 = new JLabel("Code");
+    JTextField t1 = new JTextField(5);
+    
+    JLabel l2 = new JLabel("Designation");
+    JTextField t2 = new JTextField(25);
+    
+     JButton b1 = new JButton("Insertion");
+     JButton b2 = new JButton("Retour");
+     
+     
+    
+    
+    public ajoutf()
+    {
+        con=getContentPane();
+        con.setLayout(new FlowLayout());
+        setSize(new Dimension(1300,1400));
+        
+        con.setBackground(Color.green);
+        
+        con.add(l1);
+        con.add(t1);
+        
+         con.add(l2);
+        con.add(t2);
+        
+         con.add(b1);
+        con.add(b2);
+        
+        
+        b1.addActionListener(this);
+        b2.addActionListener(this);
+        
+        
+        
+    }
+
+public void actionPerformed(ActionEvent ff)
+{
+    if (ff.getSource()==b2)
+    {
+        this.hide();
+        new menuS().setVisible(true);
+    }
+    
+    else
+    {
+        
+        //insertion
+        
+        try
+           {
+               //chargement du pilote
+               Class.forName("oracle.jdbc.driver.OracleDriver");
+               //url
+               
+               Connection con=null;
+               con=DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:xe","sddi3jours","marah");
+               
+               //creation espace memoire pour excution de la requete
+               
+               Statement s1=con.createStatement();
+               
+               //declaration de la requete
+               
+               String req="insert into filiere values("+t1.getText()+",'"+t2.getText()+"')";
+               
+               
+               //exection de la requete
+               
+               int res=s1.executeUpdate(req);
+                 JOptionPane.showMessageDialog(null,"insertion parfaite ");
+                 t1.setText("");
+                 t2.setText("");
+           }
+                   
+           
+           catch(ClassNotFoundException e1)
+           {
+            JOptionPane.showMessageDialog(null,"err de pilote ");
+           }
+           catch(SQLException e2)
+           {
+                JOptionPane.showMessageDialog(null,"err de requete ou de connexion");
+           }
+    }
+}
+}
