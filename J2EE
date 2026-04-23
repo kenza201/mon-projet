@@ -1,0 +1,164 @@
+index.html
+
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <form action="jsprecup.jsp" method="post">
+            <center>
+                <p>
+                    <label>Matricule</label>
+                    <input type="text" name="m">
+                </p>
+                
+                 <p>
+                    <label>Nom</label>
+                    <input type="text" name="n">
+                </p>
+                
+                 <p>
+                    <label>Salaire</label>
+                    <input type="text" name="s">
+                </p>
+                
+                 <p>
+                    
+                    <input type="submit" value ="Ajout" name="choix">
+                    <input type="submit" value ="Liste" name="choix">
+                </p>
+            </center>
+        </form>
+    </body>
+</html>
+
+
+
+
+
+
+
+
+jsprecup.jsp
+
+
+
+<%@page import="java.util.*" %>
+<%!int m;%>
+<%!String n;%>
+<%!float s;%>
+<%!String ch;%>
+<%!ArrayList l = new ArrayList();%>
+
+
+<%
+  ch=request.getParameter("choix");
+  
+if (ch.equals("Ajout"))
+{
+    //insertion dans le tableau
+    
+    m=Integer.parseInt(request.getParameter("m"));
+    n=request.getParameter("n");
+    s=Float.valueOf(request.getParameter("s"));
+    
+    
+    modele.employe emp=new modele.employe(m,n,s);
+    
+    l.add(emp);
+    ServletContext ct=request.getServletContext();
+    
+    RequestDispatcher dis=ct.getRequestDispatcher("/index.html");
+    dis.forward(request, response);
+    
+}
+
+else
+
+{
+    
+    //liste des employes
+    
+    out.println("<html>");
+     out.println("<head><title>liste</title></head>");
+      out.println("<body bgcolor='pink'>");
+       out.println("<center>");
+       out.println("<h1> Liste des employes</h1>");
+        out.println("<table border='2'>");
+         out.println("<tr>");
+          out.println("<td>");
+           out.println("Matricule");
+           out.println("</td>");
+           
+            out.println("<td>");
+           out.println("Nom");
+           out.println("</td>");
+           
+            out.println("<td>");
+           out.println("Salaire");
+           out.println("</td>");
+          out.println("</tr>");
+          
+          Iterator<modele.employe> it=l.iterator();
+          
+          while(it.hasNext())
+          {
+              modele.employe val=it.next();
+              out.println("<tr>");
+          out.println("<td>");
+           out.println(""+val.mat);
+           out.println("</td>");
+           
+            out.println("<td>");
+           out.println(""+val.no);
+           out.println("</td>");
+           
+            out.println("<td>");
+           out.println(""+val.sal);
+           out.println("</td>");
+          out.println("</tr>");
+          }
+          
+          
+         out.println("</table>");
+         out.println("<html>");
+        out.println("</center>");
+       out.println("</body>");
+
+
+
+
+
+
+
+
+
+
+package modele;
+
+
+public class employe {
+    
+    public int mat;
+    public String no;
+    public double sal;
+    
+    
+    public employe(int mat, String no, double sal){
+        this.mat= mat;
+        this.no= no;
+        this.sal= sal;
+    }
+}
+
+        out.println("</html>");
+    
+}
