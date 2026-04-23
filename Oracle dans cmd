@@ -1,0 +1,261 @@
+Microsoft Windows [Version 10.0.19045.6466]
+(c) Microsoft Corporation. All rights reserved.
+
+C:\Windows\system32>lsnrctl
+
+LSNRCTL for 64-bit Windows: Version 19.0.0.0.0 - Production on 20-APR-2026 14:11:26
+
+Copyright (c) 1991, 2019, Oracle.  All rights reserved.
+
+Welcome to LSNRCTL, type "help" for information.
+
+LSNRCTL> help
+The following operations are available
+An asterisk (*) denotes a modifier or extended command:
+
+start           stop            status          services
+servacls        version         reload          save_config
+trace           quit            exit            set*
+show*
+
+LSNRCTL> statu
+Connecting to (DESCRIPTION=(ADDRESS=(PROTOCOL=TCP)(HOST=KENZA)(PORT=1521)))
+STATUS of the LISTENER
+------------------------
+Alias                     LISTENER
+Version                   TNSLSNR for 64-bit Windows: Version 19.0.0.0.0 - Production
+Start Date                25-MAR-2026 14:36:37
+Uptime                    25 days 23 hr. 35 min. 46 sec
+Trace Level               off
+Security                  ON: Local OS Authentication
+SNMP                      OFF
+Listener Log File         C:\app\user\diag\tnslsnr\KENZA\listener\alert\log.xml
+Listening Endpoints Summary...
+  (DESCRIPTION=(ADDRESS=(PROTOCOL=tcp)(HOST=KENZA)(PORT=1521)))
+Services Summary...
+Service "orcl" has 1 instance(s).
+  Instance "orcl", status READY, has 1 handler(s) for this service...
+Service "orclXDB" has 1 instance(s).
+  Instance "orcl", status READY, has 1 handler(s) for this service...
+The command completed successfully
+LSNRCTL> stop
+Connecting to (DESCRIPTION=(ADDRESS=(PROTOCOL=TCP)(HOST=KENZA)(PORT=1521)))
+The command completed successfully
+LSNRCTL>
+
+
+
+
+
+Microsoft Windows [Version 10.0.19045.6466]
+(c) Microsoft Corporation. All rights reserved.
+
+C:\Users\user>ipconfig
+
+Windows IP Configuration
+
+
+Ethernet adapter Ethernet:
+
+   Media State . . . . . . . . . . . : Media disconnected
+   Connection-specific DNS Suffix  . :
+
+Wireless LAN adapter Local Area Connection* 1:
+
+   Media State . . . . . . . . . . . : Media disconnected
+   Connection-specific DNS Suffix  . :
+
+Wireless LAN adapter Local Area Connection* 2:
+
+   Media State . . . . . . . . . . . : Media disconnected
+   Connection-specific DNS Suffix  . :
+
+Ethernet adapter VMware Network Adapter VMnet1:
+
+   Connection-specific DNS Suffix  . :
+   Link-local IPv6 Address . . . . . : fe80::5f3c:7dca:526:d677%11
+   IPv4 Address. . . . . . . . . . . : 192.168.19.1
+   Subnet Mask . . . . . . . . . . . : 255.255.255.0
+   Default Gateway . . . . . . . . . :
+
+Ethernet adapter VMware Network Adapter VMnet8:
+
+   Connection-specific DNS Suffix  . :
+   Link-local IPv6 Address . . . . . : fe80::24f3:875e:db4f:e306%18
+   IPv4 Address. . . . . . . . . . . : 192.168.234.1
+   Subnet Mask . . . . . . . . . . . : 255.255.255.0
+   Default Gateway . . . . . . . . . :
+
+Wireless LAN adapter WiFi:
+
+   Connection-specific DNS Suffix  . : mshome.net
+   Link-local IPv6 Address . . . . . : fe80::5c22:8193:dd48:3879%13
+   IPv4 Address. . . . . . . . . . . : 192.168.137.131
+   Subnet Mask . . . . . . . . . . . : 255.255.255.0
+   Default Gateway . . . . . . . . . : 192.168.137.1
+
+Ethernet adapter Bluetooth Network Connection:
+
+   Media State . . . . . . . . . . . : Media disconnected
+   Connection-specific DNS Suffix  . :
+
+C:\Users\user>ping  192.168.137.131
+
+Pinging 192.168.137.131 with 32 bytes of data:
+Reply from 192.168.137.131: bytes=32 time<1ms TTL=128
+Reply from 192.168.137.131: bytes=32 time<1ms TTL=128
+Reply from 192.168.137.131: bytes=32 time<1ms TTL=128
+Reply from 192.168.137.131: bytes=32 time<1ms TTL=128
+
+Ping statistics for 192.168.137.131:
+    Packets: Sent = 4, Received = 4, Lost = 0 (0% loss),
+Approximate round trip times in milli-seconds:
+    Minimum = 0ms, Maximum = 0ms, Average = 0ms
+
+C:\Users\user>ping 192.168.192.1
+
+Pinging 192.168.192.1 with 32 bytes of data:
+Request timed out.
+Request timed out.
+Request timed out.
+
+Ping statistics for 192.168.192.1:
+    Packets: Sent = 3, Received = 0, Lost = 3 (100% loss),
+Control-C
+^C
+C:\Users\user>ping 192.168.192.1
+
+Pinging 192.168.192.1 with 32 bytes of data:
+Request timed out.
+Request timed out.
+Request timed out.
+Request timed out.
+
+Ping statistics for 192.168.192.1:
+    Packets: Sent = 4, Received = 0, Lost = 4 (100% loss),
+
+C:\Users\user>ping 192.168.1.52
+
+Pinging 192.168.1.52 with 32 bytes of data:
+Reply from 192.168.1.52: bytes=32 time=1ms TTL=127
+Reply from 192.168.1.52: bytes=32 time=1ms TTL=127
+Reply from 192.168.1.52: bytes=32 time=42ms TTL=127
+Reply from 192.168.1.52: bytes=32 time=1ms TTL=127
+
+Ping statistics for 192.168.1.52:
+    Packets: Sent = 4, Received = 4, Lost = 0 (0% loss),
+Approximate round trip times in milli-seconds:
+    Minimum = 1ms, Maximum = 42ms, Average = 11ms
+
+C:\Users\user>ping 192.168.1.52
+
+Pinging 192.168.1.52 with 32 bytes of data:
+Request timed out.
+Request timed out.
+Request timed out.
+Request timed out.
+
+Ping statistics for 192.168.1.52:
+    Packets: Sent = 4, Received = 0, Lost = 4 (100% loss),
+
+C:\Users\user>sqlplus
+
+SQL*Plus: Release 19.0.0.0.0 - Production on Mon Apr 20 15:51:22 2026
+Version 19.3.0.0.0
+
+Copyright (c) 1982, 2019, Oracle.  All rights reserved.
+
+Enter user-name: u1
+Enter password:
+ERROR:
+ORA-01017: invalid username/password; logon denied
+
+
+Enter user-name:
+ERROR:
+ORA-01017: invalid username/password; logon denied
+
+
+Enter user-name:
+ERROR:
+ORA-01017: invalid username/password; logon denied
+
+
+SP2-0157: unable to CONNECT to ORACLE after 3 attempts, exiting SQL*Plus
+
+C:\Users\user>sqlplus
+
+SQL*Plus: Release 19.0.0.0.0 - Production on Mon Apr 20 15:51:40 2026
+Version 19.3.0.0.0
+
+Copyright (c) 1982, 2019, Oracle.  All rights reserved.
+
+Enter user-name: u1/u1@
+SP2-0306: Invalid option.
+Usage: CONN[ECT] [{logon|/|proxy} [AS {SYSDBA|SYSOPER|SYSASM|SYSBACKUP|SYSDG|SYSKM|SYSRAC}] [edition=value]]
+where <logon> ::= <username>[/<password>][@<connect_identifier>]
+      <proxy> ::= <proxyuser>[<username>][/<password>][@<connect_identifier>]
+Enter user-name: ^C
+C:\Users\user>ping 192.168.1.52
+
+Pinging 192.168.1.52 with 32 bytes of data:
+Reply from 192.168.1.52: bytes=32 time=1ms TTL=127
+Reply from 192.168.1.52: bytes=32 time=1ms TTL=127
+Reply from 192.168.1.52: bytes=32 time=2ms TTL=127
+Reply from 192.168.1.52: bytes=32 time=14ms TTL=127
+
+Ping statistics for 192.168.1.52:
+    Packets: Sent = 4, Received = 4, Lost = 0 (0% loss),
+Approximate round trip times in milli-seconds:
+    Minimum = 1ms, Maximum = 14ms, Average = 4ms
+
+C:\Users\user>SQLPLUS
+
+SQL*Plus: Release 19.0.0.0.0 - Production on Mon Apr 20 16:47:31 2026
+Version 19.3.0.0.0
+
+Copyright (c) 1982, 2019, Oracle.  All rights reserved.
+
+Enter user-name: u1/u1@192.168.1.52
+ERROR:
+ORA-12504: TNS:listener was not given the SERVICE_NAME in CONNECT_DATA
+
+
+Enter user-name: u1/u1@192.168.1.52:1521/ORCL
+Last Successful login time: Mon Apr 20 2026 15:56:13 +01:00
+
+Connected to:
+Oracle Database 19c Enterprise Edition Release 19.0.0.0.0 - Production
+Version 19.3.0.0.0
+
+SQL>
+
+
+
+
+Microsoft Windows [Version 10.0.19045.6466]
+(c) Microsoft Corporation. All rights reserved.
+
+C:\Windows\system32>sqlplus
+
+SQL*Plus: Release 19.0.0.0.0 - Production on Mon Apr 20 16:45:25 2026
+Version 19.3.0.0.0
+
+Copyright (c) 1982, 2019, Oracle.  All rights reserved.
+
+Enter user-name: u1/u1@test1
+ERROR:
+ORA-12154: TNS:could not resolve the connect identifier specified
+
+
+Enter user-name: u1/u1@test
+Last Successful login time: Mon Apr 20 2026 16:49:46 +01:00
+
+Connected to:
+Oracle Database 19c Enterprise Edition Release 19.0.0.0.0 - Production
+Version 19.3.0.0.0
+
+SQL>
+
+
+
